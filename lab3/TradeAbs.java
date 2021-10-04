@@ -1,23 +1,26 @@
 package lab3;
 
-public class Trade {
+public abstract class TradeAbs {
     private int id;
     private String symbol;
     private int quantity;
     private double price;
 
-    public Trade(int id, String symbol, int quantity, double price) {
+    public TradeAbs(int id, String symbol, int quantity, double price) {
         this.id = id;
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
     }
 
-    public Trade(int id, String symbol, int quantity) {
+    public TradeAbs(int id, String symbol, int quantity) {
         this.id = id;
         this.symbol = symbol;
         this.quantity = quantity;
     }
+
+   // abstract calcDividend method
+    abstract void calcDividend();
 
     public void setPrice(double price) {
         if (price <= 0)
