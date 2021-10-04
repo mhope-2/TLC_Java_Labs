@@ -15,4 +15,9 @@ public class MembershipType {
     public String getMembershipType() {
         return membershipType;
     }
+
+    @Override
+    public String toString() {
+        return membershipType;
+    }
 }

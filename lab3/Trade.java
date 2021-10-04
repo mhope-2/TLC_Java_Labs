@@ -1,16 +1,21 @@
 package lab3;
 
+import java.time.LocalDateTime;
+
 public class Trade {
     private int id;
     private String symbol;
     private int quantity;
     private double price;
+    private LocalDateTime tradeTimeStamp;
+
 
     public Trade(int id, String symbol, int quantity, double price) {
         this.id = id;
         this.symbol = symbol;
         this.quantity = quantity;
         this.price = price;
+        this.tradeTimeStamp = LocalDateTime.now();
     }
 
     public Trade(int id, String symbol, int quantity) {
@@ -39,6 +44,10 @@ public class Trade {
 
     public double getPrice() {
         return price;
+    }
+
+    public LocalDateTime getTradeTimeStamp() {
+        return tradeTimeStamp;
     }
 
     @Override
