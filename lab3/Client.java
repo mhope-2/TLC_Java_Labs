@@ -36,9 +36,9 @@ public class Client {
 
     // set client membership type
     public void setMembershipType(int points) {
-        if (this.points < 10){
+        if (Client.points < 10){
             this.membershipType.setMembershipType("Bronze");
-        } else if (this.points >= 10 && this.points <= 19){
+        } else if (Client.points >= 10 && Client.points <= 19){
             this.membershipType.setMembershipType("Silver");
         } else{
             this.membershipType.setMembershipType("Gold");
