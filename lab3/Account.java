@@ -9,6 +9,6 @@ public class Account {
     }
 
     public void setTradeValue(double tradeValue) {
-        this.tradeValue = tradeValue;
+        this.tradeValue += tradeValue;
     }
 }
