@@ -24,6 +24,9 @@ public class Trade {
         this.quantity = quantity;
     }
 
+    public Trade(Trade tradeObject) {
+    }
+
     public void setPrice(double price) {
         if (price <= 0)
             throw new IllegalArgumentException("Invalid Price Vale: Only positive prices are accepted");
