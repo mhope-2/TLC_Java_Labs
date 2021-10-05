@@ -3,7 +3,7 @@ package lab3;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws TradeIDException {
 
         Trade tradeObject1 = new Trade(3, "APPL", 7, 9.00);
         Trade tradeObject2 = new Trade(3, "APPL", 7, 100.00);

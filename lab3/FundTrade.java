@@ -5,12 +5,12 @@ public class FundTrade extends Trade{
     private final double percentage = 10.00;
     private double dividend;
 
-    public FundTrade(int id, String symbol, int quantity, double price, double dividend) {
+    public FundTrade(int id, String symbol, int quantity, double price, double dividend) throws TradeIDException {
         super(id, symbol, quantity, price);
         this.dividend = (percentage/100) * price;
     }
 
-    public FundTrade(int id, String symbol, int quantity, double price) {
+    public FundTrade(int id, String symbol, int quantity, double price) throws TradeIDException {
         super(id, symbol, quantity, price);
         this.dividend = (percentage/100) * price;
     }

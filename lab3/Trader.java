@@ -10,7 +10,7 @@ public class Trader {
         this.name = name;
     }
 
-    public double addTrade(){
+    public double addTrade() throws TradeIDException {
         account = new Account();
         trade = new Trade(2, "APPL", 8, 200.00);
 

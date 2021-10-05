@@ -24,7 +24,7 @@ public class Client {
     }
 
     // Client creating trade and increasing points
-    public void createTrade(int id, String symbol, int quantity, double price){
+    public void createTrade(int id, String symbol, int quantity, double price) throws TradeIDException {
         trade = new Trade(id, symbol, quantity, price);
 
         // add client point for trade

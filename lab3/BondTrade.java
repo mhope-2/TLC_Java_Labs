@@ -4,7 +4,7 @@ public class BondTrade extends Trade{
 
     private double dividend;
 
-    public BondTrade(int id, String symbol, int quantity, double price, double dividend) {
+    public BondTrade(int id, String symbol, int quantity, double price, double dividend) throws TradeIDException {
         super(id, symbol, quantity, price);
         this.dividend = dividend;
     }

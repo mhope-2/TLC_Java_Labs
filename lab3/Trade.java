@@ -1,6 +1,8 @@
 package lab3;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Trade {
     private int id;
@@ -9,8 +11,19 @@ public class Trade {
     private double price;
     private LocalDateTime tradeTimeStamp;
 
+    // list of created ids
+    private static final Set<Integer> ids = new HashSet<>();
 
-    public Trade(int id, String symbol, int quantity, double price) {
+
+
+    public Trade(int id, String symbol, int quantity, double price) throws TradeIDException {
+
+        if (ids.contains(id)){
+            throw new TradeIDException("ID already exists!");
+        }else{
+            ids.add(id);
+        }
+
         this.id = id;
         this.symbol = symbol;
         this.quantity = quantity;
@@ -26,6 +39,8 @@ public class Trade {
 
     public Trade(Trade tradeObject) {
     }
+
+
 
     public void setPrice(double price) {
         if (price <= 0)
