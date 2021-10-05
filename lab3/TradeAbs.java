@@ -22,6 +22,7 @@ public abstract class TradeAbs {
    // abstract calcDividend method
     abstract void calcDividend();
 
+
     public void setPrice(double price) {
         if (price <= 0)
             throw new IllegalArgumentException("Invalid Price Vale: Only positive prices are accepted");

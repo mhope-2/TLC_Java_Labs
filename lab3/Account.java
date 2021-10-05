@@ -2,7 +2,7 @@ package lab3;
 
 public class Account {
 
-    private double tradeValue = 0;
+    private double tradeValue = 0.00;
 
     private Trade tradeObjects[];
 

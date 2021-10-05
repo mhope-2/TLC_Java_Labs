@@ -2,8 +2,9 @@ package lab3;
 
 public class FundTrade extends Trade{
 
-    private final double percentage = 10.00;
     private double dividend;
+
+    private final double percentage = 20.00;
 
     public FundTrade(int id, String symbol, int quantity, double price, double dividend) throws TradeIDException {
         super(id, symbol, quantity, price);

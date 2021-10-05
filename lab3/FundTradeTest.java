@@ -10,7 +10,7 @@ public class FundTradeTest {
     public void testDividend() throws TradeIDException {
 
         FundTrade fundTrade = new FundTrade(2, "APPL", 4, 100.00);
-        assertEquals("", fundTrade.getDividend(), 10.00, 0);
+        assertEquals("", fundTrade.getDividend(), 20.00, 0);
 
     }
 }

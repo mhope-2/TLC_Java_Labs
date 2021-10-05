@@ -30,6 +30,7 @@ public class TradeTest {
         if (t1.getPrice() > 0){
             isPositive = true;
         }
+
         assertTrue(isPositive);
 
     }

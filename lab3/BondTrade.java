@@ -2,7 +2,7 @@ package lab3;
 
 public class BondTrade extends Trade{
 
-    private double dividend;
+    private final double  dividend;
 
     public BondTrade(int id, String symbol, int quantity, double price, double dividend) throws TradeIDException {
         super(id, symbol, quantity, price);

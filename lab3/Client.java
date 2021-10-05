@@ -27,8 +27,13 @@ public class Client {
     public void createTrade(int id, String symbol, int quantity, double price) throws TradeIDException {
         trade = new Trade(id, symbol, quantity, price);
 
+        // check whther client can trade
+
         // add client point for trade
         this.points += 1;
+
+        // check points and assign right membership type
+
     }
 
     // canTrade method
