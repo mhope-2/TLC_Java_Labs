@@ -5,6 +5,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+//import static  org.mockito.Mockito.*;
+// assert
+//verify(mock).method(params)
+
 
 public class TradeTest {
 
