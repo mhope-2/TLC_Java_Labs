@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ReadFile {
@@ -17,7 +18,7 @@ public class ReadFile {
             for (Object content : contents){
                 System.out.println(content);
             }
-            System.out.println();
+            System.out.println(LocalDate.now());
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
