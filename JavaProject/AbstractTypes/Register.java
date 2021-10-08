@@ -11,10 +11,10 @@ public class Register {
         this.nameables = nameables;
     }
 
-    public List<Object> getRegister(){
+    public List<String> getRegister(){
 
         return this.nameables.stream()
-                .map(nameable -> Nameable.toString(nameable, null))
+                .map(nameable -> Nameable.toString(nameable))
                 .collect(Collectors.toList());
     }
 }

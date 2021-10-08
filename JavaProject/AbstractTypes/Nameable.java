@@ -2,7 +2,7 @@ package JavaProject.AbstractTypes;
 
 public interface Nameable {
 
-    static Object toString(Nameable nameable, Object o) {
+    static String toString(Nameable nameable) {
         return nameable.getName();
     }
 
