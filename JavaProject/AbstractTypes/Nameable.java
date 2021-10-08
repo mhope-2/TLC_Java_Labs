@@ -6,6 +6,6 @@ public interface Nameable {
         return nameable.getName();
     }
 
-    public String getName();
+    String getName();
 
 }
