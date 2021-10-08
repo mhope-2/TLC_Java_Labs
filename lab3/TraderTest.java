@@ -1,6 +1,5 @@
 package lab3;
 
-import Arrays.IntArr;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

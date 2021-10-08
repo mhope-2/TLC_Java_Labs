@@ -2,7 +2,7 @@ package BasicConcurrency;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class IncCounnter {
+public class IncCounter {
     public static void main(String[] args) {
         AtomicInteger counter = new AtomicInteger();
 

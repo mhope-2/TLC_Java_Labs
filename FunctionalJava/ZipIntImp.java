@@ -30,3 +30,17 @@ public class ZipIntImp implements ZipInt {
         return stringList;
     }
 }
+
+//    static BiFunction<List<String>,List<String>, List<String>> zip = (firstList, secondList)
+//            ->
+//    {
+//        List<String> times = new ArrayList<>();
+//        times.addAll(firstList);
+//        times.addAll(secondList);
+//        return times;
+//    };
+//
+//    Collection apply = zip.apply(List.of("One", "Two", "Theree"), List.of("Seven", "Eight"));
+//        System.out.println(apply);
+
+
