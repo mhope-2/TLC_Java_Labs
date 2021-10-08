@@ -1,5 +1,7 @@
 package JavaProject.BasicJava;
 
+import org.junit.Test;
+
 import java.util.List;
 
 public class Lecture {
@@ -14,7 +16,7 @@ public class Lecture {
     }
 
     public void enter(Student student){
-
+        this.student = student;
     }
 
     public Double getHighestAverageGrade(List<Student> studentGrades){
