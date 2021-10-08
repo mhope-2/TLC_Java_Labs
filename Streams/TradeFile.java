@@ -11,12 +11,21 @@ public class TradeFile {
     private int quantity;
     private BigDecimal price;
 
-    public TradeFile(String symbol, LocalDate date, LocalTime timeStamp, int quantity, BigDecimal price) {
+    public TradeFile(String symbol, String date, String timeStamp, String quantity, String price) {
+        // parse price as BigDecimal
+        BigDecimal priceObj = new BigDecimal(price);
+
+        // Format Date
+        String year, month, day;
+        year = date.substring(0, 4);
+        month = date.substring(4, 6);
+        day = date.substring(6, 8);
+
         this.symbol = symbol;
-        this.date = date;
-        this.timeStamp = timeStamp;
-        this.quantity = quantity;
-        this.price = price;
+        this.date = LocalDate.parse(date);
+        this.timeStamp = LocalTime.ofNanoOfDay(Long.parseLong(timeStamp));
+        this.quantity =  Integer.parseInt(quantity);
+        this.price = priceObj ;
     }
 
     public String getSymbol() {
