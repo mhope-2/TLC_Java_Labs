@@ -1,5 +1,7 @@
 package JavaProject.AbstractTypes;
 
+import JavaProject.Enums.Level;
+
 public interface Nameable {
 
     static String toString(Nameable nameable) {
@@ -8,4 +10,5 @@ public interface Nameable {
 
     String getName();
 
+    Level getLevel();
 }

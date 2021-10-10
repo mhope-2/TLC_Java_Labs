@@ -1,4 +1,5 @@
 package JavaProject.Enums;
 
-public interface Level {
+public enum Level {
+    One, Two, Three
 }

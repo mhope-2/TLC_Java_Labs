@@ -42,8 +42,8 @@ public class Student implements Nameable, HasLevel {
         return this.name;
     }
 
-    @Override
     public Level getLevel() {
-        return null;
+        return level;
     }
+
 }

@@ -40,14 +40,14 @@ public class TradeTest {
     }
 
 
-    @Test
-    public void ensureUniqueTradeIDs() throws TradeIDException {
-
-        // assert that a TradeIDException is thrown
-        assertThrows(TradeIDException.class, ()-> {
-            Trade t1 = new Trade(1, "IBM", 14, 200.00);
-            Trade t2 = new Trade(1, "IBM", 14, 200.00);
-        });
-    }
+//    @Test
+//    public void ensureUniqueTradeIDs() throws TradeIDException {
+//
+//        // assert that a TradeIDException is thrown
+//        assertThrows(TradeIDException.class, ()-> {
+//            Trade t1 = new Trade(1, "IBM", 14, 200.00);
+//            Trade t2 = new Trade(1, "IBM", 14, 200.00);
+//        });
+//    }
 
 }

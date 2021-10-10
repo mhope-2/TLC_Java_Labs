@@ -1,6 +1,7 @@
 package JavaProject.Inheritance;
 
 import JavaProject.BasicJava.Student;
+import JavaProject.Enums.Level;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public class NaughtyStudent extends Student {
     public Double getAverage() {
         return super.getAverage() + (super.getAverage() * 10/100);
     }
+
+
 }

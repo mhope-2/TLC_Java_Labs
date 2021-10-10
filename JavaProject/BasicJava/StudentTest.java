@@ -1,7 +1,10 @@
 package JavaProject.BasicJava;
 
+import JavaProject.AbstractTypes.Nameable;
+import JavaProject.AbstractTypes.Register;
+import JavaProject.Enums.Level;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
