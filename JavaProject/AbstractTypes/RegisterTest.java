@@ -2,6 +2,7 @@ package JavaProject.AbstractTypes;
 
 import JavaProject.BasicJava.Student;
 import JavaProject.Enums.Level;
+import JavaProject.Exceptions.StudentNotFoundException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -102,6 +103,72 @@ public class RegisterTest {
 
         assertEquals(register.getRegisterByLevel2(Level.Two), studentNames);
 
+    }
+
+    @Test
+    public void testReturnStudentByName() throws StudentNotFoundException {
+        Double[] studentGrades = {14.38, 90.12, 12.23, 29.19};
+
+        List<Double> studentGradesArrayList = new ArrayList<>();
+        studentGradesArrayList.addAll(Arrays.asList(studentGrades));
+
+        // create students
+        Student student1 = new Student("Kay", studentGradesArrayList, Level.Three);
+        Student student2= new Student("Jay", studentGradesArrayList, Level.Two);
+        Student student3 = new Student("Bay", studentGradesArrayList, Level.Three);
+
+        // new student not part of register
+        Student student4 = new Student("Bay", studentGradesArrayList, Level.One);
+
+        // create a list of nameables
+        List<Nameable> nameables = new ArrayList<>(Arrays.asList(student1,student2,student3));
+
+        // create a list of students
+        List<Student> students = new ArrayList<>(Arrays.asList(student1,student2,student3));
+
+        // create a register
+        Register register = new Register(students);
+
+        //create a list of student names
+        List<String> studentNames = new ArrayList<>(Arrays.asList("Kay","Bay"));
+
+        // return student name because student exist
+        assertEquals(register.returnStudentByName(student1), "Kay");
+
+        // student not part of register... throw StudentNotFoundException exception
+        assertThrows(StudentNotFoundException.class, ()-> {
+            assertEquals(register.returnStudentByName(student4), "Kays");
+        });
+
+    }
+
+    @Test
+    public void testReturnGradesAsDoubleStream(){
+        Double[] studentGrades = {14.38, 90.12, 12.23, 29.19};
+
+        List<Double> studentGradesArrayList = new ArrayList<>();
+        studentGradesArrayList.addAll(Arrays.asList(studentGrades));
+
+        // create students
+        Student student1 = new Student("Kay", studentGradesArrayList, Level.Three);
+        Student student2= new Student("Jay", studentGradesArrayList, Level.Two);
+        Student student3 = new Student("Bay", studentGradesArrayList, Level.Three);
+
+        // new student not part of register
+        Student student4 = new Student("Bay", studentGradesArrayList, Level.One);
+
+        // create a list of nameables
+        List<Nameable> nameables = new ArrayList<>(Arrays.asList(student1,student2,student3));
+
+        // create a list of students
+        List<Student> students = new ArrayList<>(Arrays.asList(student1,student2,student3));
+
+        // create a register
+        Register register = new Register(students);
+
+        List<List<Double>> gradeStream = Arrays.asList(student1.getStudentGrades(), student2.getStudentGrades(), student3.getStudentGrades());
+
+        assertEquals(register.returnGradesAsADoubleStream(), gradeStream);
     }
 
 }

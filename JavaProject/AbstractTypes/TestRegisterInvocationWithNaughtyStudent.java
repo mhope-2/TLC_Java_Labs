@@ -27,7 +27,7 @@ public class TestRegisterInvocationWithNaughtyStudent {
         List<Nameable> nameables = new ArrayList<>(Arrays.asList(student1,student2,student3));
 
         // create a register
-        Register register = new Register(naughtyStudents);
+//        Register register = new Register(naughtyStudents);
 
     }
 }

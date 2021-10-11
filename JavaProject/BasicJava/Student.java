@@ -27,6 +27,10 @@ public class Student implements Nameable, HasLevel {
         this.level = level;
     }
 
+    public List<Double> getStudentGrades() {
+        return studentGrades;
+    }
+
     public Double getAverage(){
 
         Double totalGrades = 0.00;

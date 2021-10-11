@@ -2,6 +2,7 @@ package JavaProject.AbstractTypes;
 
 import JavaProject.BasicJava.Student;
 import JavaProject.Enums.Level;
+import JavaProject.Exceptions.StudentNotFoundException;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -38,9 +39,9 @@ public class Register {
 
         Map<Level, List<Student>> students = new HashMap<>();
 
-        for(Nameable student : nameables){
+        for(Student student : nameables){
             if (student.getLevel() == level){
-                students.put(student.getLevel(), List.of((Student) student));
+                students.put(student.getLevel(), List.of(student));
             }
         }
 
@@ -53,10 +54,23 @@ public class Register {
     }
 
     public List<Student> sort (Comparator<Student> comparator, List<Student> students){
-        Collections.sort(students, comparator);
+        students.sort(comparator);
         return students;
     }
 
+    public String returnStudentByName(Student student) throws StudentNotFoundException {
+         if(this.nameables.contains(student)){
+             return student.getName();
+         }
+         else {
+             throw new StudentNotFoundException(student.getName() + "not found in register!");
+         }
+    }
 
+    public List<List<Double>> returnGradesAsADoubleStream(){
+        return this.nameables.stream()
+                .map(Student::getStudentGrades)
+                .collect(Collectors.toList());
+    }
 
 }
