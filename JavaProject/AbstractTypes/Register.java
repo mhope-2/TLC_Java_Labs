@@ -18,7 +18,7 @@ public class Register {
     public List<String> getRegister(){
 
         return this.nameables.stream()
-                .map(nameable -> Nameable.toString(nameable))
+                .map(Student::getName)
                 .collect(Collectors.toList());
     }
 
