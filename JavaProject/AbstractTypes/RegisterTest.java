@@ -171,4 +171,40 @@ public class RegisterTest {
         assertEquals(register.returnGradesAsADoubleStream(), gradeStream);
     }
 
+    @Test
+    public void testHighestOfStudentGrades(){
+        Double[] studentGrades1 = {200.00, 90.12, 12.23, 29.19};
+        Double[] studentGrades2 = {201.00, 90.12, 12.23, 29.19};
+        Double[] studentGrades3 = {202.00, 90.12, 12.23, 29.19};
+        Double[] studentGrades4 = {203.00, 90.12, 12.23, 29.19};
+
+        List<Double> studentGradesArrayList1 = new ArrayList<>(Arrays.asList(studentGrades1));
+        List<Double> studentGradesArrayList2 = new ArrayList<>(Arrays.asList(studentGrades2));
+        List<Double> studentGradesArrayList3 = new ArrayList<>(Arrays.asList(studentGrades3));
+        List<Double> studentGradesArrayList4 = new ArrayList<>(Arrays.asList(studentGrades4));
+
+
+        // create students
+        Student student1 = new Student("Kay", studentGradesArrayList1, Level.Three);
+        Student student2= new Student("Jay", studentGradesArrayList2, Level.Two);
+        Student student3 = new Student("Bay", studentGradesArrayList3, Level.Three);
+        Student student4 = new Student("Bay", studentGradesArrayList4, Level.Three);
+
+
+        // create a list of nameables
+        List<Nameable> nameables = new ArrayList<>(Arrays.asList(student1,student2,student3, student4));
+
+        // create a list of students
+        List<Student> students = new ArrayList<>(Arrays.asList(student1,student2,student3, student4));
+
+        // create a register
+        Register register = new Register(students);
+
+        // Expected return array
+        List<Double> highestGrades = new ArrayList<>(Arrays.asList(200.00, 201.00, 202.00, 203.00));
+
+        register.returnHighestOfAllStudentsGrades();
+    }
+
+
 }

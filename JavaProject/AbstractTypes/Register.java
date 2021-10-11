@@ -73,4 +73,17 @@ public class Register {
                 .collect(Collectors.toList());
     }
 
+    public List<Double> returnHighestOfAllStudentsGrades(){
+
+        List<Double> highestGrades = new ArrayList<>();
+
+        for (Student student: this.nameables){
+            highestGrades.add(student.getStudentGrades().stream()
+                    .max(Double::compare)
+                    .get());
+        }
+
+        return highestGrades;
+    }
+
 }
