@@ -181,9 +181,6 @@ public class RegisterTest {
         Student student4 = new Student("Bay", List.of(83.00, 90.12, 12.23, 29.19), Level.Three);
 
 
-//        // create a list of nameables
-        List<Nameable> nameables = new ArrayList<>(Arrays.asList(student1,student2,student3, student4));
-//
 //        // create a list of students
         List<Student> students = new ArrayList<>(Arrays.asList(student1,student2,student3, student4));
 //
@@ -192,10 +189,6 @@ public class RegisterTest {
 
         assertEquals(register.returnHighestOfAllStudentsGrades(student2), 90.12, 0);
 
-//        // Expected return array
-//        List<Double> highestGrades = new ArrayList<>(Arrays.asList(200.00, 201.00, 202.00, 203.00));
-
-//        register.returnHighestOfAllStudentsGrades();
     }
 
 

@@ -20,8 +20,7 @@ public class StudentTest {
     public void testGetAverage(){
         Double[] studentGrades = {14.38, 90.12, 12.23, 29.19};
 
-        List<Double> studentGradesArrayList = new ArrayList<>();
-        studentGradesArrayList.addAll(Arrays.asList(studentGrades));
+        List<Double> studentGradesArrayList = new ArrayList<>(Arrays.asList(studentGrades));
 
         Student student = new Student(studentGradesArrayList);
 

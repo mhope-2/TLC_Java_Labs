@@ -5,7 +5,7 @@ import JavaProject.Enums.HasLevel;
 import JavaProject.Enums.Level;
 
 import java.util.List;
-import java.util.stream.DoubleStream;
+import java.util.OptionalDouble;
 import java.util.stream.Stream;
 
 public class Student implements Nameable, HasLevel {
@@ -41,6 +41,12 @@ public class Student implements Nameable, HasLevel {
             totalGrades += grade;
         }
         return totalGrades /this.studentGrades.size();
+    }
+
+    public OptionalDouble getGradesAverage(){
+        return this.studentGrades.stream()
+                .mapToDouble(grade -> grade)
+                .average();
     }
 
 
