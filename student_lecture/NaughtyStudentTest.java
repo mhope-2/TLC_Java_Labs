@@ -2,7 +2,6 @@ package student_lecture;
 
 import static org.junit.Assert.*;
 
-import JavaProject.Inheritance.NaughtyStudent;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -24,10 +23,9 @@ public class NaughtyStudentTest {
     public void testNaughtyStudentScore(){
         Double[] studentGrades = {100.00, 100.00, 100.00, 100.00};
 
-        List<Double> studentGradesArrayList = new ArrayList<>();
-        studentGradesArrayList.addAll(Arrays.asList(studentGrades));
+        List<Double> studentGradesArrayList = new ArrayList<>(Arrays.asList(studentGrades));
 
-        JavaProject.Inheritance.NaughtyStudent naughtyStudent = new NaughtyStudent(studentGradesArrayList);
+        NaughtyStudent naughtyStudent = new NaughtyStudent(studentGradesArrayList);
 
         Double gradeAverage = naughtyStudent.getAverage();
 

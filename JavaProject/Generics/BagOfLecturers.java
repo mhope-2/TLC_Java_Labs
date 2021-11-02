@@ -1,4 +1,4 @@
 package JavaProject.Generics;
 
-public class BagOfLectures {
+public class BagOfLecturers {
 }

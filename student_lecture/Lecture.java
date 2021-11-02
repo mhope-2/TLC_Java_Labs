@@ -8,7 +8,7 @@ public class Lecture {
 
     }
 
-    public Double getHighestAverageGrade(List<Student> studentGrades){
+    public Double getHighestAverageGrade(List<? extends Student> studentGrades){
         Double highestAverageGrade = 0.00;
 
         for (Student stud : studentGrades){

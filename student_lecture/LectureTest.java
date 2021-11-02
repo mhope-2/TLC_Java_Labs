@@ -37,26 +37,31 @@ public class LectureTest {
     @Test
     public void testNaughtyStudentScoringHigher(){
 
+        // student grades
+        Double[] naughtyStudentGrades1 = { 100.00, 100.00, 100.00, 100.00 };
+        Double[] naughtyStudentGrades2 = { 100.00, 100.00, 100.00, 100.00 };
+        Double[] naughtyStudentGrades3 = { 100.00, 100.00, 100.00, 100.00 };
+        Double[] naughtyStudentGrades4 = { 100.00, 100.00, 100.00, 100.00 };
+
         // grade array lists
-        List<Double> studentGradesArrayList1 = List.of(100.00, 100.00, 100.00, 100.00);
-        List<Double> studentGradesArrayList2 = List.of(80.00, 80.00, 80.00, 80.00);
-        List<Double> studentGradesArrayList3 = List.of(60.00, 60.00, 60.00, 60.00);
-        List<Double> studentGradesArrayList4 = List.of(50.00, 50.00, 50.00, 50.00);
+        List<Double> studentGradesArrayList1 = new ArrayList<>(Arrays.asList(naughtyStudentGrades1));
+        List<Double> studentGradesArrayList2 = new ArrayList<>(Arrays.asList(naughtyStudentGrades2));
+        List<Double> studentGradesArrayList3 = new ArrayList<>(Arrays.asList(naughtyStudentGrades3));
+        List<Double> studentGradesArrayList4 = new ArrayList<>(Arrays.asList(naughtyStudentGrades4));
+
+        // naughty students
+        NaughtyStudent naughtyStudent1 = new NaughtyStudent(studentGradesArrayList1);
+        NaughtyStudent naughtyStudent2 = new NaughtyStudent(studentGradesArrayList2);
+        NaughtyStudent naughtyStudent3 = new NaughtyStudent(studentGradesArrayList3);
+        NaughtyStudent naughtyStudent4 = new NaughtyStudent(studentGradesArrayList4);
 
 
-        // create a list of naughty students
-        List<NaughtyStudent> naughtyStudentArrayList  = List.of(
-                new NaughtyStudent(studentGradesArrayList1),
-                new NaughtyStudent(studentGradesArrayList2),
-                new NaughtyStudent(studentGradesArrayList3),
-                new NaughtyStudent(studentGradesArrayList4)
-        );
+        // create an array list of students
+        List<JavaProject.BasicJava.Student> naughtyStudentArrayList  = new ArrayList<>();
+        naughtyStudentArrayList.addAll(Arrays.asList(naughtyStudent1, naughtyStudent2, naughtyStudent3, naughtyStudent4));
 
-
-        Lecture lecture = new Lecture();
-        Student naughtyStudent = new Student(naughtyStudentArrayList);
-//        Double highestAverageGrade = lecture.getHighestAverageGrade(naughtyStudentArrayList);
-
+        JavaProject.BasicJava.Lecture lecture = new JavaProject.BasicJava.Lecture();
+        Double highestAverageGrade = lecture.getHighestAverageGrade(naughtyStudentArrayList);
 
         BigDecimal bd = new BigDecimal(highestAverageGrade).setScale(2, RoundingMode.HALF_UP);
         double roundedGradeAverage = bd.doubleValue();
@@ -64,6 +69,7 @@ public class LectureTest {
 
         // assert naught Student scoring higher than they should
         assertEquals(roundedGradeAverage, 110.00, 0);
+
 
         // ASSERT A SINGLE NAUGHTY STUDENT SCORING HIGHER
 

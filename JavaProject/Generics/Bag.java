@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Bag<T> implements Iterable<T> {
+public class Bag<T>  {
     private List<T> elements = new ArrayList<>();
 
     public void add(T el){
@@ -19,8 +19,4 @@ public class Bag<T> implements Iterable<T> {
         elements.clear();
     }
 
-    @Override
-    public Iterator<T> iterator() {
-        return null;
-    }
 }

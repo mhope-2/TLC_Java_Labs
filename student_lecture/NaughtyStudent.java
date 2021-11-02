@@ -1,7 +1,6 @@
 package student_lecture;
 
 import JavaProject.BasicJava.Student;
-import JavaProject.Enums.Level;
 
 import java.util.List;
 
