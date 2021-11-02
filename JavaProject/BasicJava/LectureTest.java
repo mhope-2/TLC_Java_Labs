@@ -36,8 +36,7 @@ public class LectureTest {
         Student student4 = new Student(studentGradesArrayList4);
 
         // create an array list of students
-        List<Student> studentArrayList  = new ArrayList<>();
-        studentArrayList.addAll(Arrays.asList(student1, student2, student3, student4));
+        List<Student> studentArrayList  = List.of(student1, student2, student3, student4);
 
         Lecture lecture = new Lecture();
         Double highestAverageGrade = lecture.getHighestAverageGrade(studentArrayList);

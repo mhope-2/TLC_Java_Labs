@@ -1,0 +1,20 @@
+package student_lecture;
+
+import JavaProject.BasicJava.Student;
+import JavaProject.Enums.Level;
+
+import java.util.List;
+
+public class NaughtyStudent extends Student {
+
+    public NaughtyStudent(List<Double> studentGrades) {
+        super(studentGrades);
+    }
+
+    @Override
+    public Double getAverage() {
+        return super.getAverage() + (super.getAverage() * 10/100);
+    }
+
+
+}
