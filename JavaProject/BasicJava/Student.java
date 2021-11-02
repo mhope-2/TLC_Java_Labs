@@ -5,6 +5,8 @@ import JavaProject.Enums.HasLevel;
 import JavaProject.Enums.Level;
 
 import java.util.List;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 public class Student implements Nameable, HasLevel {
 
@@ -39,6 +41,11 @@ public class Student implements Nameable, HasLevel {
             totalGrades += grade;
         }
         return totalGrades /this.studentGrades.size();
+    }
+
+
+    public Stream<Double> getStudentGradesAsDoubleStream(){
+        return this.studentGrades.stream();
     }
 
     @Override

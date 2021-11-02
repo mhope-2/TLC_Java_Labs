@@ -24,15 +24,10 @@ public class Register {
 
     public List<String> getRegisterByLevel(Level level){
 
-        List<String> studentNames = new ArrayList<>();
-
-        for(Nameable student : nameables){
-            if (student.getLevel() == level){
-                studentNames.add(student.getName());
-            }
-        }
-
-        return studentNames;
+        return this.nameables.stream()
+                .filter(student -> student.getLevel() == level)
+                .map(Student::getName)
+                .collect(Collectors.toList());
     }
 
     public Map<Level, List<Student>> getRegisterByLevel2(Level level){
@@ -73,17 +68,11 @@ public class Register {
                 .collect(Collectors.toList());
     }
 
-    public List<Double> returnHighestOfAllStudentsGrades(){
+    public Double returnHighestOfAllStudentsGrades(Student student){
 
-        List<Double> highestGrades = new ArrayList<>();
-
-        for (Student student: this.nameables){
-            highestGrades.add(student.getStudentGrades().stream()
-                    .max(Double::compare)
-                    .get());
-        }
-
-        return highestGrades;
+        return student.getStudentGrades().stream()
+                .max(Double::compare)
+                .get();
     }
 
 }
