@@ -191,5 +191,14 @@ public class RegisterTest {
 
     }
 
+    @Test
+    public void testGetStudentByName(){
+
+    }
+
+    @Test
+    public void testGetStudentsByName(){
+
+    }
 
 }
