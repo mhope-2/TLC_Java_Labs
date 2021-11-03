@@ -75,6 +75,14 @@ public class Register {
                 .get();
     }
 
+    public List<List<Double>> gradesAboveSixty(){
+
+        return this.nameables.stream()
+                .filter(student -> student.getAverage() > 60.00)
+                .map(Student::getStudentGrades)
+                .toList();
+
+    }
 
 
 }
