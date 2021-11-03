@@ -53,6 +53,19 @@ public class Register {
         return students;
     }
 
+    public Optional<Student> getStudentByName(String studentName){
+        return this.nameables.stream()
+                .filter(student -> student.getName().equals(studentName))
+                .findFirst();
+    }
+
+    public List<Student> getStudentsByName(List<String> names){
+
+        return this.nameables.stream()
+                .filter(student -> names.contains(student.getName()))
+                .collect(Collectors.toList());
+    }
+
     public String returnStudentByName(Student student) throws StudentNotFoundException {
          if(this.nameables.contains(student)){
              return student.getName();
@@ -81,7 +94,6 @@ public class Register {
                 .filter(student -> student.getAverage() > 60.00)
                 .map(Student::getStudentGrades)
                 .toList();
-
     }
 
 
