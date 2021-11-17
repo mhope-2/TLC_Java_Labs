@@ -15,9 +15,16 @@ public class Trade {
     private static final Set<Integer> ids = new HashSet<>();
 
 
-
     public Trade(int id, String symbol, int quantity, double price) throws TradeIDException {
 
+        this.id = id;
+        this.symbol = symbol;
+        this.quantity = quantity;
+        this.price = price;
+        this.tradeTimeStamp = LocalDateTime.now();
+    }
+
+    public void setId(int id) throws TradeIDException {
         if (ids.contains(id)){
             throw new TradeIDException("ID already exists!");
         }else{
@@ -25,10 +32,6 @@ public class Trade {
         }
 
         this.id = id;
-        this.symbol = symbol;
-        this.quantity = quantity;
-        this.price = price;
-        this.tradeTimeStamp = LocalDateTime.now();
     }
 
     public Trade(int id, String symbol, int quantity) {
