@@ -17,10 +17,10 @@ public class RunnableCounterInt {
         System.out.println("no. of threads: " + Thread.activeCount());
 
 
-         try{  
-          t2.join();
-          System.out.println("after join no. of threads: " + Thread.activeCount());
-         }catch(Exception e){System.out.println(e);
-         }  System.out.println(runnableCounter2.getTaskName() + " joined");
+         try {
+              t2.join();
+              System.out.println("after join no. of threads: " + Thread.activeCount());
+         } catch(Exception e){System.out.println(e);
+        }  System.out.println(runnableCounter2.getTaskName() + " joined");
     }
 }

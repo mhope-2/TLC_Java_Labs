@@ -22,7 +22,7 @@ public class Main {
 
         switch (opName){
             case "add":
-                return (result ->  operand1 + operand2);
+                return (result -> operand1 + operand2);
             case "subtract":
                 return (result -> operand1 - operand2);
             case "power":

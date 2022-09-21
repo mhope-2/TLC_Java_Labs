@@ -3,7 +3,7 @@ package BasicConcurrency;
 public class View {
 
     public void acceptResult(Task task, int value) {
-        println("Task "+task.getNumber()+ " finished result = "+value);
+        println("Task " + task.getNumber() + " finished result = " + value);
     }
 
     public void displayResults() {

@@ -3,7 +3,7 @@ package Arrays;
 import java.util.Arrays;
 
 public class ArrClass {
-    int arr[] = new int[10];
+    int[] arr = new int[10];
 
     public ArrClass() {
         for(int i = 0; i < 50; i++){

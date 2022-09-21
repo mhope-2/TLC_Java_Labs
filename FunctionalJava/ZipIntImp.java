@@ -13,7 +13,6 @@ public class ZipIntImp implements ZipInt {
         ListIterator<String> iterator1 = list1.listIterator();
         ListIterator<String> iterator2 = list2.listIterator();
 
-
         for(int i = 0; i< list1.size(); i++){
                 List<String> stringList = makeListOfStrings(list1.get(i), list2.get(i));
                 convolutedList.add(stringList);

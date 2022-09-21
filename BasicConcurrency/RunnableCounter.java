@@ -15,8 +15,6 @@ public class RunnableCounter implements Runnable{
 
         this.taskName = taskName;
         this.sleepTime = 1000;
-
-
     }
 
     public int getCounterValue() {

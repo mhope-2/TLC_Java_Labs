@@ -1,7 +1,7 @@
 package BankOfMallon;
 
 public class Account {
-    private Double interest;
+    private final Double interest;
     private Double fee;
     private Double overdraft_facility;
 

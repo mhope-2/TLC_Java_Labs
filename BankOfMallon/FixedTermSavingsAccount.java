@@ -1,6 +1,7 @@
 package BankOfMallon;
 
 public class FixedTermSavingsAccount extends Account{
+
     private Double interest_rate;
 
 

@@ -2,7 +2,6 @@ package BasicConcurrency;
 
 public class Task  implements Runnable{
     public static final int LIMIT = 10;
-
     private static final int TIME_MIN = 250;
     private static final int TIME_SCALE = 100;
 
