@@ -6,6 +6,7 @@ public class GoldMembershipType extends MembershipType{
     private static final int maxTradePerDay = 20;
 
     public GoldMembershipType(int points) {
+        
     }
 
     public String getMembershipType() {
